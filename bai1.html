@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 1</title>
+</head>
+<body>
+<input type="number" placeholder="Nhập số lượng cần hiển thị" id="input">
+<button onclick="fiBonacci()">Kiểm tra</button>
+<p id="output" style="word-break: break-all"></p>
+<script>
+    function fiBonacci(){
+        let num = document.getElementById('input').value;
+        let count=0;
+        let array = [];
+        let a =1;
+        let b =0;
+        if (num<1){
+            document.getElementById('output').innerHTML = "Hãy nhập vào số dương";
+        }
+        else {
+            while (num){
+                if (count<=num){
+                    let tot = a;
+                    a = a + b;
+                    b = tot;
+                    array.push(tot);
+                    num--;
+                }
+            }
+        }
+        document.getElementById('output').innerHTML =array.toString();
+    }
+</script>
+</body>
+</html>

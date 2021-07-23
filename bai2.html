@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 2</title>
+</head>
+<body>
+<input type="number" placeholder="Nhập số cần tính" id="input">
+<button onclick="giaiThua()">Tính</button>
+<p id="output"></p>
+<script>
+  function giaiThua(){
+    let num = parseInt(document.getElementById('input').value);
+    let text;
+    let gt = 1;
+    if (num<1){
+      text= "Số bạn nhập không hợp lệ";
+    }else {
+      for (let i = 1; i <= num; i++) {
+        gt *= i;
+      }
+      text= "Giai thừa của " + num + " = " + gt;
+    }
+    document.getElementById('output').innerHTML=text;
+  }
+</script>
+</body>
+</html>
